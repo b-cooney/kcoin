@@ -50,7 +50,6 @@ export default defineConfig({
                   width: 16px;
                   height: 16px;
                 }
-              `,
             },
             },
           ];
