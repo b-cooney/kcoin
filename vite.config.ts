@@ -12,32 +12,7 @@ export default defineConfig({
       transformIndexHtml(html) {
         if (process.env.NODE_ENV !== "development" && process.env.SHOW_WATERMARK !== "false") {
           return [
-            {
-              tag: "style",
-              attrs: { type: "text/css" },
-              injectTo: "head",
-              children: `
-                .srcbook-watermark {
-                }
-                .srcbook-watermark:hover {
-
-                }
-                .srcbook-watermark:active {
-                 
-                }
-                .srcbook-watermark img {
-              
-                }
-              `,
-            },
-            {
-              tag: "",
-              attrs: { type: "" },
-              injectTo: "",
-              children: `
-                \`;
-              `,
-            },
+    
           ];
         }
 
@@ -57,7 +32,7 @@ export default defineConfig({
               };
             }
 
-            // Report any thrown errors / promise rejections so they show up in the logs
+            // Report any thrown errors / promise rejections so they show up in the ogs
             window.addEventListener('error', (e) => {
               if (window.parent) {
                 window.parent.postMessage({ type: 'error', stack: e.error.stack }, '*');
