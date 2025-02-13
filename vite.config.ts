@@ -36,7 +36,6 @@ export default defineConfig({
               injectTo: "",
               children: `
                 \`;
-                document.body.appendChild(watermark);
               `,
             },
           ];
